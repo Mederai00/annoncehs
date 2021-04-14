@@ -1,0 +1,31 @@
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Ref</th>
+      <th>Titre</th>
+      <th>Montant</th>
+      <th>Jours</th>
+      <th>Desc</th>
+      <th>User</th>
+      <th>Matiere</th>
+      <th>Op</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let a of matiere.annonceshs" >
+      <td> {{ a.ref}}</td>
+      <td> {{ a.titre}}</td>
+      <td> {{ a.montant}}</td>
+      <td> {{ a.jourDisponnibilite}}</td>
+      <td> {{ a.description}}</td>
+      <td> {{ a.utilisateur.login}}</td>
+      <td> {{ a.matiere.libelle}}</td>
+      <td>
+        <button class=" fa fa-trash" (click)="deleteAnnoncehsByRef(a)"></button>
+      </td>
+    </tr>
+    </tbody>
+
+  </table>
+
+

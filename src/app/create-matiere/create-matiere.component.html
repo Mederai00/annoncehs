@@ -1,0 +1,62 @@
+
+
+  <div class="p-0 pr-1 pl-1">
+    <div class="card border-primary ">
+      <div class="card-header">
+        Matiere
+        <button class="btn btn-info float-right" (click)="reset()">Reset</button>
+      </div>
+      <div class="card-body row">
+        <div class="form-group col-md-6 ">
+          <label for="refmatiere">Reference</label>
+          <input type="text" class="form-control " id="refmatiere" [(ngModel)]="matiere.ref">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="libelle">Libelle</label>
+          <input type="text" class="form-control" id="libelle" [(ngModel)]="matiere.libelle">
+        </div>
+      </div>
+
+    </div>
+      <div class="card border-primary" >
+      <div class="card-header">AnnonceHeureSupp</div>
+      <div class="card-body">
+        <div class="row">
+
+          <div class="form-group col-md-4">
+            <label for="ref">Reference</label>
+            <input type="text" class="form-control " id="ref" [(ngModel)]="annoncehs.ref">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="titre">Titre</label>
+            <input type="text" class="form-control" id="titre" [(ngModel)]="annoncehs.titre">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="utilisateur">refUtilisateur</label>
+            <input type="text" class="form-control" id="utilisateur" [(ngModel)]="annoncehs.utilisateur.ref">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="montant">Montant</label>
+            <input type="number" class="form-control" id="montant" [(ngModel)]="annoncehs.montant">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="desc">Description</label>
+            <input type="text" class="form-control" id="desc" [(ngModel)]="annoncehs.description">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="jours">Jours</label>
+            <input type="text" class="form-control" id="jours" [(ngModel)]="annoncehs.jourDisponnibilite">
+          </div>
+
+        </div>
+
+      </div>
+      <div class="card-footer">
+        <button (click)="addAnnonce()" class="btn btn-block btn-danger" [disabled]="validateAdd()">Add Item</button>
+      </div>
+    </div>
+  </div>
+
+
+
+

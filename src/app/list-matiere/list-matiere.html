@@ -1,0 +1,14 @@
+
+<div class="row mt-2">
+  <div class="col-sm-3 mt-1" *ngFor="let m of matieres">
+    <div class="card border-primary mb-3" style="max-width: 20rem;">
+      <div class="card-header">{{m.ref}}</div>
+      <div class="card-body">
+        <h2 class="card-title">Title: {{ m.libelle }}</h2>
+        <button (click)="deleteByRef(m)" class="btn btn-primary  mr-2 fa fa-trash"></button>
+        <button (click)="findAnnoncehsByMatiereRef(m)" class="btn btn-primary mr-2 fa fa-list" routerLink="/listannoncehs"></button>
+        <button (click)="editMatiere(m)" class="btn btn-primary mr-2 fa fa-pencil" routerLink="/"></button>
+      </div>
+    </div>
+  </div>
+</div>
